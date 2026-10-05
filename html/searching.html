@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0f0f1a" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="Searching Universal V3 — 12 mesin pencari, multi-tab browser, DNS-over-HTTPS, safe browsing, security dashboard, reader mode, reading list, dan 30+ fitur privasi. 100% client-side." />
+<meta name="keywords" content="search engine, proxy, dns aman, safe browsing, private search, IRGXYMODS, multi-tab" />
+<meta name="author" content="IRGXYMODS" />
+<meta property="og:title" content="Searching Universal V3 — IRGXYMODS" />
+<meta property="og:description" content="Browser + search engine lengkap: multi-tab, DoH, safe browsing, reader mode." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://ik.imagekit.io/IrgxyMods/IMG_20250922_195742.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Searching Universal V3 — IRGXYMODS" />
+<meta name="twitter:description" content="12 mesin pencari, multi-tab, DoH, safe browsing." />
+<link rel="canonical" href="https://irgxymods.example/searching.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preconnect" href="https://cloudflare-dns.com" />
+<link rel="preconnect" href="https://duckduckgo.com" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/searching.css" />
+<title>Searching Universal V3 — IRGXYMODS</title>
+</head>
+<body data-theme="dark" class="sg-body">
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header>
+  <div class="header-top">
+    <a href="index.html" class="logo-brand"><i class="fas fa-crown" aria-hidden="true"></i><h1>IRGXYMODS</h1></a>
+    <div class="header-actions">
+      <button class="settings-btn" id="sgPrivacyBtn" title="Mode Privasi" aria-label="Toggle mode privasi"><i class="fas fa-user-secret" aria-hidden="true"></i></button>
+      <button class="settings-btn" id="sgShortcutBtn" title="Shortcut (?)" aria-label="Bantuan shortcut"><i class="fas fa-keyboard" aria-hidden="true"></i></button>
+      <button class="settings-btn" id="sgSettingsBtn" title="Pengaturan" aria-label="Buka pengaturan"><i class="fas fa-cog" aria-hidden="true"></i></button>
+      <div style="position:relative;display:inline-block;">
+        <button class="settings-btn" id="settingsToggle" aria-label="Menu lainnya"><i class="fas fa-ellipsis-vertical" aria-hidden="true"></i></button>
+        <div class="settings-dropdown" id="settingsDropdown">
+          <a href="login.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" id="profileDropdownBtn"><i class="fas fa-user"></i> Profil</button>
+          <button class="dropdown-item" id="themeToggleBtn"><i class="fas fa-palette"></i> Tema</button>
+          <div class="dropdown-divider"></div>
+          <a href="irgxymods.html" class="dropdown-item"><i class="fas fa-info-circle"></i> Tentang</a>
+          <button class="dropdown-item" id="helpBtn"><i class="fas fa-question-circle"></i> Bantuan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-tabs-container">
+    <div class="nav-tabs" role="navigation" aria-label="Navigasi utama">
+      <a href="index.html" class="nav-tab">Aplikasi Mod</a>
+      <a href="irgxymods.html" class="nav-tab">IrgxyMods</a>
+      <a href="acount.html" class="nav-tab">Akun Premium</a>
+      <a href="ali_motion.html" class="nav-tab" aria-current="page"><i class="fas fa-film" aria-hidden="true"></i> Alight Motion</a>
+      <a href="searching.html" class="nav-tab active" aria-current="page"><i class="fas fa-magnifying-glass"></i> Searching</a>
+      <a href="fitur.html" class="nav-tab">Fitur Eksklusif</a>
+      <a href="testimoni.html" class="nav-tab">Testimoni</a>
+      <a href="cheat.html" class="nav-tab">Cheat Game</a>
+      <a href="jadwalsholat.html" class="nav-tab"><i class="fas fa-mosque"></i> Jadwal Sholat</a>
+      <a href="alquran.html" class="nav-tab"><i class="fas fa-book-quran"></i> Al-Qur'an</a>
+      <a href="tiktok.html" class="nav-tab"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="youtube.html" class="nav-tab"><i class="fab fa-youtube"></i> YouTube</a>
+      <a href="instagram_v4.html" class="nav-tab"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="threads.html" class="nav-tab"><i class="fas fa-at"></i> Threads</a>
+      <a href="facebook.html" class="nav-tab"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="compressvideo.html" class="nav-tab"><i class="fas fa-compress"></i> Compress</a>
+      <a href="iqcgenerator.html" class="nav-tab"><i class="fas fa-comments"></i> IQC</a>
+      <a href="qris-barcode.html" class="nav-tab"><i class="fas fa-qrcode"></i> QRIS</a>
+      <a href="spotify.html" class="nav-tab"><i class="fab fa-spotify"></i> Spotify</a>
+      <a href="testspeed.html" class="nav-tab"><i class="fas fa-tachometer-alt"></i> Speed</a>
+      <a href="base64_v7.html" class="nav-tab"><i class="fas fa-code"></i> Base64</a>
+      <a href="emulator_terminal.html" class="nav-tab"><i class="fas fa-terminal"></i> Terminal</a>
+      <a href="shortlink-bypass.html" class="nav-tab"><i class="fas fa-unlink"></i> Bypass</a>
+      <a href="proyek.html" class="nav-tab">Proyek Saya</a>
+      <a href="portofolio.html" class="nav-tab">Portofolio</a>
+      <a href="kontak.html" class="nav-tab">Kontak</a>
+      <a href="login.html" class="nav-tab"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="container sg-container">
+
+  <!-- ══════════════ HOME MODE ══════════════ -->
+  <section id="sgHomeMode" class="sg-home-mode" data-aos="fade-up">
+    <div class="sg-home-hero">
+      <div class="sg-home-logo"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></div>
+      <h1 class="sg-home-title">Searching Universal <span class="sg-version-tag">V3</span></h1>
+      <p class="sg-home-sub">12 mesin pencari · Multi-tab browser · DNS-over-HTTPS · Safe Browsing · Reader Mode · Reading List</p>
+      <div class="sg-home-pills">
+        <span class="sg-pill"><i class="fas fa-shield-halved"></i> Safe Browsing</span>
+        <span class="sg-pill"><i class="fas fa-user-secret"></i> Private Mode</span>
+        <span class="sg-pill"><i class="fas fa-server"></i> DNS-over-HTTPS</span>
+        <span class="sg-pill"><i class="fas fa-layer-group"></i> Multi-Tab</span>
+        <span class="sg-pill"><i class="fas fa-bolt"></i> 12 Mesin</span>
+      </div>
+    </div>
+
+    <!-- SEARCH BAR MEGA -->
+    <div class="srch-bar-wrap">
+      <form class="srch-bar" id="sgSearchForm" role="search" autocomplete="off">
+        <div class="srch-engine-select" id="sgEngineSelect" tabindex="0" role="button" aria-label="Pilih mesin pencari" aria-expanded="false">
+          <i class="fab fa-google" id="sgEngineIcon"></i>
+          <span id="sgEngineName">Google</span>
+          <i class="fas fa-chevron-down srch-engine-caret"></i>
+          <div class="srch-engine-menu" id="sgEngineMenu" role="menu"></div>
+        </div>
+        <i class="fas fa-search srch-bar-search-icon" aria-hidden="true"></i>
+        <input type="text" id="sgSearchInput" class="srch-input" placeholder="Cari atau ketik URL..." autocomplete="off" spellcheck="false" maxlength="500" aria-label="Kolom pencarian" />
+        <button type="button" class="srch-mini-btn" id="sgPasteBtn" title="Tempel" aria-label="Tempel dari clipboard"><i class="fas fa-paste"></i></button>
+        <button type="button" class="srch-mini-btn srch-mini-clear" id="sgClearBtn" title="Bersihkan" aria-label="Bersihkan"><i class="fas fa-xmark"></i></button>
+        <button type="button" class="srch-mini-btn" id="sgVoiceBtn" title="Cari dengan suara" aria-label="Cari dengan suara"><i class="fas fa-microphone"></i></button>
+        <button type="submit" class="srch-go-btn" id="sgGoBtn" aria-label="Cari"><i class="fas fa-search"></i> <span>CARI</span></button>
+        <div class="srch-suggest" id="sgSuggest" role="listbox" hidden></div>
+      </form>
+    </div>
+
+    <div class="srch-quicktags">
+      <button type="button" class="srch-qtag" data-q="trending hari ini">🔥 Trending</button>
+      <button type="button" class="srch-qtag" data-q="berita terbaru indonesia">📰 Berita</button>
+      <button type="button" class="srch-qtag" data-q="gambar hd wallpaper">🖼️ Gambar</button>
+      <button type="button" class="srch-qtag" data-q="video tutorial terbaru">🎬 Video</button>
+      <button type="button" class="srch-qtag" data-q="cara tembus situs diblokir">🔓 Situs Terblokir</button>
+      <button type="button" class="srch-qtag" data-q="dark web directory">🕶️ Dark Web</button>
+      <button type="button" class="srch-qtag" data-q="contoh kode javascript">💻 Kode</button>
+      <button type="button" class="srch-qtag" data-q="restoran terdekat">📍 Lokasi</button>
+    </div>
+
+    <!-- TOOLBAR AKSI CEPAT -->
+    <div class="srch-toolbar">
+      <div class="srch-tool-card" data-tool="proxy" role="button" tabindex="0">
+        <div class="srch-tool-icon"><i class="fas fa-mask"></i></div>
+        <div class="srch-tool-info"><div class="srch-tool-name">Tembus Blokir</div><div class="srch-tool-sub">CroxyProxy</div></div>
+        <span class="srch-toggle-pill" id="pillProxy">OFF</span>
+      </div>
+      <div class="srch-tool-card" data-tool="dns" role="button" tabindex="0">
+        <div class="srch-tool-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="srch-tool-info"><div class="srch-tool-name">DNS Aman</div><div class="srch-tool-sub" id="toolDnsName">Cloudflare</div></div>
+        <span class="srch-toggle-pill active" id="pillDns">ON</span>
+      </div>
+      <div class="srch-tool-card" data-tool="incognito" role="button" tabindex="0">
+        <div class="srch-tool-icon"><i class="fas fa-user-secret"></i></div>
+        <div class="srch-tool-info"><div class="srch-tool-name">Mode Incognito</div><div class="srch-tool-sub">Tanpa jejak</div></div>
+        <span class="srch-toggle-pill active" id="pillIncognito">ON</span>
+      </div>
+      <div class="srch-tool-card" data-tool="vpn" role="button" tabindex="0">
+        <div class="srch-tool-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="srch-tool-info"><div class="srch-tool-name">VPN Proxy</div><div class="srch-tool-sub">TOR-ready</div></div>
+        <span class="srch-toggle-pill" id="pillVpn">OFF</span>
+      </div>
+      <div class="srch-tool-card" data-tool="scan" role="button" tabindex="0">
+        <div class="srch-tool-icon"><i class="fas fa-radar"></i></div>
+        <div class="srch-tool-info"><div class="srch-tool-name">Scan Keamanan</div><div class="srch-tool-sub">Audit lengkap</div></div>
+        <span class="srch-toggle-pill" id="pillScan">IDLE</span>
+      </div>
+      <div class="srch-tool-card" data-tool="bookmark" role="button" tabindex="0">
+        <div class="srch-tool-icon"><i class="fas fa-bookmark"></i></div>
+        <div class="srch-tool-info"><div class="srch-tool-name">Bookmark</div><div class="srch-tool-sub" id="toolBookmarkCount">0 item</div></div>
+        <span class="srch-toggle-pill" id="pillBookmark">0</span>
+      </div>
+    </div>
+
+    <!-- QUICKLINKS -->
+    <div class="sg-home-quicklinks">
+      <h3 class="sg-home-section-title"><i class="fas fa-star"></i> Akses Cepat</h3>
+      <div class="sg-quicklinks-grid">
+        <a class="sg-quicklink" href="#" data-url="https://www.google.com"><span class="sg-ql-icon google"><i class="fab fa-google"></i></span><span>Google</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://duckduckgo.com"><span class="sg-ql-icon ddg"><i class="fas fa-shield-halved"></i></span><span>DuckDuckGo</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://www.youtube.com"><span class="sg-ql-icon yt"><i class="fab fa-youtube"></i></span><span>YouTube</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://github.com"><span class="sg-ql-icon gh"><i class="fab fa-github"></i></span><span>GitHub</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://en.wikipedia.org"><span class="sg-ql-icon wiki"><i class="fab fa-wikipedia-w"></i></span><span>Wikipedia</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://www.reddit.com"><span class="sg-ql-icon rd"><i class="fab fa-reddit"></i></span><span>Reddit</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://web.archive.org"><span class="sg-ql-icon arch"><i class="fas fa-clock-rotate-left"></i></span><span>Wayback</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://www.bing.com"><span class="sg-ql-icon bing"><i class="fab fa-microsoft"></i></span><span>Bing</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://search.brave.com"><span class="sg-ql-icon brave"><i class="fas fa-shield"></i></span><span>Brave</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://searx.be"><span class="sg-ql-icon searx"><i class="fas fa-magnifying-glass-chart"></i></span><span>Searx</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://www.startpage.com"><span class="sg-ql-icon startpage"><i class="fas fa-user-lock"></i></span><span>Startpage</span></a>
+        <a class="sg-quicklink" href="#" data-url="https://www.ecosia.org"><span class="sg-ql-icon ecosia"><i class="fas fa-tree"></i></span><span>Ecosia</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ BROWSER MODE ══════════════ -->
+  <section id="sgBrowserMode" class="sg-browser-mode" hidden>
+    <!-- Browser Bar -->
+    <div class="sg-browser-bar" role="toolbar" aria-label="Toolbar browser">
+      <div class="sg-browser-bar-left">
+        <button class="sg-tool-btn" id="sgBackBtn" title="Kembali (Alt+←)" aria-label="Kembali" disabled><i class="fas fa-arrow-left"></i></button>
+        <button class="sg-tool-btn" id="sgForwardBtn" title="Maju" aria-label="Maju" disabled><i class="fas fa-arrow-right"></i></button>
+        <button class="sg-tool-btn" id="sgReloadBtn" title="Muat Ulang (Ctrl+R)" aria-label="Muat ulang"><i class="fas fa-rotate-right"></i></button>
+        <button class="sg-tool-btn" id="sgHomeBtn" title="Beranda" aria-label="Beranda"><i class="fas fa-house"></i></button>
+      </div>
+
+      <form class="sg-mini-searchbar" id="sgMiniSearchForm" autocomplete="off" role="search">
+        <span class="sg-mini-searchbar-icon"><i class="fas fa-magnifying-glass"></i></span>
+        <input type="text" id="sgMiniInput" class="sg-mini-searchbar-input" placeholder="Cari atau URL..." aria-label="Cari atau ketik URL" />
+        <button type="submit" class="sg-mini-searchbar-go" title="Cari / Buka"><i class="fas fa-arrow-right"></i></button>
+      </form>
+
+      <div class="sg-browser-bar-right">
+        <button class="sg-tool-btn" id="sgFindBtn" title="Cari di halaman (Ctrl+F)" aria-label="Cari di halaman"><i class="fas fa-magnifying-glass-plus"></i></button>
+        <button class="sg-tool-btn" id="sgReaderBtn" title="Reader Mode" aria-label="Reader mode"><i class="fas fa-book-open"></i></button>
+        <button class="sg-tool-btn" id="sgShareBtn" title="Bagikan" aria-label="Bagikan halaman"><i class="fas fa-share-nodes"></i></button>
+        <button class="sg-tool-btn" id="sgBookmarkBtn" title="Bookmark (Ctrl+D)" aria-label="Toggle bookmark"><i class="far fa-star"></i></button>
+        <button class="sg-tool-btn" id="sgShieldBtn" title="Safe Browsing" aria-label="Toggle safe browsing"><i class="fas fa-shield-halved"></i></button>
+        <button class="sg-tool-btn" id="sgMenuBtn" title="Menu" aria-label="Menu samping"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+
+    <!-- Tabs Bar -->
+    <div class="sg-tabsbar" role="tablist" aria-label="Daftar tab">
+      <div class="sg-tabs" id="sgTabs"></div>
+      <button class="sg-tab-add" id="sgTabAdd" title="Tab Baru (Ctrl+T)" aria-label="Tab baru"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Viewport -->
+    <div class="sg-viewport-wrap">
+      <div class="sg-viewport" id="sgViewport">
+        <div class="sg-browser" id="sgBrowser">
+          <div class="sg-browser-overlay" id="sgBrowserOverlay" aria-busy="false">
+            <div class="sg-loader">
+              <div class="sg-loader-orbit"></div>
+              <div class="sg-loader-orbit"></div>
+              <div class="sg-loader-orbit"></div>
+              <div class="sg-loader-core"><i class="fas fa-magnifying-glass"></i></div>
+              <div class="sg-loader-pct" id="sgLoaderPct">0%</div>
+            </div>
+            <div class="sg-loader-text" id="sgLoaderText">Menghubungkan…</div>
+            <div class="sg-loader-bar"><div class="sg-loader-fill" id="sgLoaderFill"></div></div>
+          </div>
+          <iframe id="sgFrame" class="sg-frame"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals allow-downloads"
+            referrerpolicy="no-referrer" loading="lazy" title="Konten halaman"></iframe>
+          <!-- Find in page overlay -->
+          <div class="sg-find-bar" id="sgFindBar" hidden>
+            <input type="text" id="sgFindInput" placeholder="Cari di halaman..." aria-label="Cari di halaman" />
+            <span class="sg-find-count" id="sgFindCount">0/0</span>
+            <button id="sgFindPrev" title="Sebelumnya"><i class="fas fa-chevron-up"></i></button>
+            <button id="sgFindNext" title="Berikutnya"><i class="fas fa-chevron-down"></i></button>
+            <button id="sgFindClose" title="Tutup (Esc)"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+
+        <div class="sg-blocked" id="sgBlocked" hidden>
+          <div class="sg-blocked-icon"><i class="fas fa-shield-halved"></i></div>
+          <h2 class="sg-blocked-title">Situs Diblokir</h2>
+          <p class="sg-blocked-sub" id="sgBlockedMsg">Situs ini terdeteksi mencurigakan oleh Safe Browsing.</p>
+          <div class="sg-blocked-reasons" id="sgBlockedReasons"></div>
+          <div class="sg-blocked-actions">
+            <button class="sg-btn sg-btn-primary" id="sgBlockedBackBtn"><i class="fas fa-arrow-left"></i> Kembali Aman</button>
+            <button class="sg-btn sg-btn-danger" id="sgBlockedProceedBtn"><i class="fas fa-triangle-exclamation"></i> Tetap Lanjutkan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SEARCH RESULT PANEL ══════════════ -->
+  <div class="srch-result-panel" id="sgResultPanel" hidden>
+    <div class="srch-panel-head">
+      <h2 class="srch-panel-title"><i class="fas fa-list-check"></i> Hasil Pencarian</h2>
+      <div class="srch-panel-status" id="sgPanelStatus">Siap</div>
+    </div>
+    <div id="sgResultBody">
+      <div class="srch-skeleton" id="sgSkeleton" hidden>
+        <div class="srch-skel-row"></div><div class="srch-skel-row"></div>
+        <div class="srch-skel-row"></div><div class="srch-skel-row"></div>
+      </div>
+      <div class="srch-results" id="sgResults" hidden></div>
+      <div class="srch-error" id="sgError" hidden>
+        <i class="fas fa-triangle-exclamation"></i>
+        <h3>Pencarian Gagal</h3>
+        <p id="sgErrorMsg">Terjadi kesalahan. Silakan coba lagi.</p>
+        <button type="button" class="srch-retry-btn" id="sgRetryBtn"><i class="fas fa-rotate-right"></i> Coba Lagi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ SECURITY DASHBOARD ══════════════ -->
+  <div class="srch-sec-dashboard" data-aos="fade-up">
+    <div class="srch-panel-head">
+      <h2 class="srch-panel-title"><i class="fas fa-shield-halved"></i> Security Dashboard</h2>
+      <div class="srch-panel-status" id="sgSecStatus">Idle</div>
+    </div>
+    <div class="srch-sec-grid">
+      <div class="srch-sec-score-wrap">
+        <svg class="srch-score-svg" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><linearGradient id="sgGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#C9A96E"/><stop offset="50%" stop-color="#D4B98C"/><stop offset="100%" stop-color="#B8946A"/>
+          </linearGradient></defs>
+          <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+          <circle id="sgScoreRing" cx="60" cy="60" r="52" fill="none" stroke="url(#sgGoldGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="0 327" transform="rotate(-90 60 60)"/>
+        </svg>
+        <div class="srch-score-center">
+          <div class="srch-score-num" id="sgScoreNum">0</div>
+          <div class="srch-score-label">Skor Keamanan</div>
+        </div>
+      </div>
+      <div class="srch-sec-tests">
+        <div class="srch-sec-test" data-test="ip"><span class="srch-sec-dot" id="dotIp"></span><span class="srch-sec-test-name">IP Leak</span><span class="srch-sec-test-val" id="valIp">—</span></div>
+        <div class="srch-sec-test" data-test="dns"><span class="srch-sec-dot" id="dotDns"></span><span class="srch-sec-test-name">DNS Leak</span><span class="srch-sec-test-val" id="valDns">—</span></div>
+        <div class="srch-sec-test" data-test="webrtc"><span class="srch-sec-dot" id="dotWebrtc"></span><span class="srch-sec-test-name">WebRTC Leak</span><span class="srch-sec-test-val" id="valWebrtc">—</span></div>
+        <div class="srch-sec-test" data-test="fp"><span class="srch-sec-dot" id="dotFp"></span><span class="srch-sec-test-name">Fingerprint</span><span class="srch-sec-test-val" id="valFp">—</span></div>
+        <div class="srch-sec-test" data-test="ssl"><span class="srch-sec-dot" id="dotSsl"></span><span class="srch-sec-test-name">SSL / HTTPS</span><span class="srch-sec-test-val" id="valSsl">—</span></div>
+        <div class="srch-sec-test" data-test="cookie"><span class="srch-sec-dot" id="dotCookie"></span><span class="srch-sec-test-name">Cookie Tracker</span><span class="srch-sec-test-val" id="valCookie">—</span></div>
+      </div>
+    </div>
+    <div class="srch-sec-actions">
+      <button type="button" class="srch-primary-btn" id="sgRunAuditBtn"><i class="fas fa-magnifying-glass-chart"></i> Jalankan Audit</button>
+      <button type="button" class="srch-gold-btn" id="sgSafeModeBtn"><i class="fas fa-shield"></i> Mode Aman Maksimal</button>
+      <button type="button" class="srch-secondary-btn" id="sgPrivacyReportBtn"><i class="fas fa-file-shield"></i> Privacy Report</button>
+    </div>
+    <div class="srch-log-wrap">
+      <div class="srch-log-head">
+        <span><i class="fas fa-terminal"></i> Live Security Log</span>
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="srch-log-clear" id="sgLogExportBtn"><i class="fas fa-download"></i> Export</button>
+          <button type="button" class="srch-log-clear" id="sgLogClearBtn"><i class="fas fa-trash-can"></i> Bersihkan</button>
+        </div>
+      </div>
+      <div class="srch-log" id="sgLiveLog" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════ BYPASS PANEL ══════════════ -->
+  <div class="srch-bypass-panel" data-aos="fade-up">
+    <div class="srch-panel-head">
+      <h2 class="srch-panel-title"><i class="fas fa-unlock"></i> Bypass Situs Diblokir</h2>
+      <div class="srch-panel-status">8 proxy multi-layer</div>
+    </div>
+    <div class="srch-bypass-input-row">
+      <input type="text" id="sgBypassInput" class="srch-input-flat" placeholder="Masukkan URL yang diblokir (contoh: https://reddit.com)" aria-label="URL yang diblokir" />
+      <button type="button" class="srch-gold-btn" id="sgBypassBtn"><i class="fas fa-rocket"></i> Buka via Proxy</button>
+    </div>
+    <div class="srch-bypass-presets">
+      <span class="srch-preset-label">Preset cepat:</span>
+      <button type="button" class="srch-preset-btn" data-url="https://www.reddit.com">Reddit</button>
+      <button type="button" class="srch-preset-btn" data-url="https://medium.com">Medium</button>
+      <button type="button" class="srch-preset-btn" data-url="https://www.quora.com">Quora</button>
+      <button type="button" class="srch-preset-btn" data-url="https://www.nytimes.com">NYTimes</button>
+      <button type="button" class="srch-preset-btn" data-url="https://twitter.com">Twitter / X</button>
+      <button type="button" class="srch-preset-btn" data-url="https://sci-hub.se">Sci-Hub</button>
+      <button type="button" class="srch-preset-btn" data-url="https://www.wikipedia.org">Wikipedia</button>
+    </div>
+    <div class="srch-bypass-result" id="sgBypassResult" hidden>
+      <div class="srch-bypass-url" id="sgBypassUrl"></div>
+      <div class="srch-bypass-proxies" id="sgBypassProxies"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════ BOOKMARK & RIWAYAT ══════════════ -->
+  <div class="srch-bm-panel" data-aos="fade-up">
+    <div class="srch-panel-head">
+      <h2 class="srch-panel-title"><i class="fas fa-bookmark"></i> Bookmark &amp; Riwayat</h2>
+      <div class="srch-tab-row">
+        <button type="button" class="srch-tab-btn active" data-tab="history"><i class="fas fa-clock-rotate-left"></i> Riwayat</button>
+        <button type="button" class="srch-tab-btn" data-tab="bookmark"><i class="fas fa-bookmark"></i> Bookmark</button>
+      </div>
+    </div>
+    <div class="srch-tab-body">
+      <div class="srch-tab-pane active" data-pane="history">
+        <input type="text" class="srch-input-flat" id="sgHistFilter" placeholder="Filter riwayat..." style="margin-bottom:10px" />
+        <div class="srch-list" id="sgHistoryList"></div>
+        <button type="button" class="srch-clear-btn" id="sgClearHistory"><i class="fas fa-trash-can"></i> Hapus Semua Riwayat</button>
+      </div>
+      <div class="srch-tab-pane" data-pane="bookmark">
+        <input type="text" class="srch-input-flat" id="sgBmFilter" placeholder="Filter bookmark..." style="margin-bottom:10px" />
+        <div class="srch-list" id="sgBookmarkList"></div>
+        <button type="button" class="srch-clear-btn" id="sgClearBookmarks"><i class="fas fa-trash-can"></i> Hapus Semua Bookmark</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ INFO CARDS ══════════════ -->
+  <div class="srch-info-cards" data-aos="fade-up">
+    <div class="srch-info-card">
+      <div class="srch-info-icon"><i class="fas fa-user-shield"></i></div>
+      <h3>Privasi</h3>
+      <p>Query tidak disimpan di server manapun. Semua riwayat tersimpan lokal di perangkat Anda.</p>
+    </div>
+    <div class="srch-info-card">
+      <div class="srch-info-icon"><i class="fas fa-bolt"></i></div>
+      <h3>Kecepatan</h3>
+      <p>Multi-engine routing dengan fallback otomatis menjamin hasil tercepat &amp; paling relevan.</p>
+    </div>
+    <div class="srch-info-card">
+      <div class="srch-info-icon"><i class="fas fa-plug-circle-check"></i></div>
+      <h3>Kompatibilitas</h3>
+      <p>Chrome, Edge, Firefox, Safari, Opera, Brave — mobile &amp; desktop tanpa install.</p>
+    </div>
+    <div class="srch-info-card">
+      <div class="srch-info-icon"><i class="fas fa-layer-group"></i></div>
+      <h3>Multi-Tab</h3>
+      <p>Buka banyak situs sekaligus. Pin, discard, duplicate, dan reorder tab seperti browser modern.</p>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<!-- ══════════════ DRAWER SETELAN ══════════════ -->
+<div class="srch-drawer-overlay" id="sgDrawerOverlay"></div>
+<aside class="srch-drawer" id="sgDrawer" aria-label="Pengaturan pencarian" aria-hidden="true">
+  <div class="srch-drawer-head">
+    <h3><i class="fas fa-sliders"></i> Setelan Pencarian</h3>
+    <button type="button" class="srch-drawer-close" id="sgDrawerClose" aria-label="Tutup"><i class="fas fa-xmark"></i></button>
+  </div>
+  <div class="srch-drawer-tabs" role="tablist">
+    <button type="button" class="srch-dtab active" data-dtab="umum" role="tab"><i class="fas fa-gear"></i> Umum</button>
+    <button type="button" class="srch-dtab" data-dtab="privasi" role="tab"><i class="fas fa-user-secret"></i> Privasi</button>
+    <button type="button" class="srch-dtab" data-dtab="keamanan" role="tab"><i class="fas fa-shield-halved"></i> Keamanan</button>
+    <button type="button" class="srch-dtab" data-dtab="dns" role="tab"><i class="fas fa-server"></i> DNS &amp; Proxy</button>
+    <button type="button" class="srch-dtab" data-dtab="tampilan" role="tab"><i class="fas fa-palette"></i> Tampilan</button>
+    <button type="button" class="srch-dtab" data-dtab="lanjutan" role="tab"><i class="fas fa-wrench"></i> Lanjutan</button>
+  </div>
+  <div class="srch-drawer-body">
+    <!-- UMUM -->
+    <div class="srch-dpane active" data-dpane="umum">
+      <label class="srch-field"><span>Homepage URL</span><input type="url" id="setHomepage" placeholder="https://www.google.com" /></label>
+      <label class="srch-field"><span>Mesin Default</span><select id="setEngine"></select></label>
+      <label class="srch-field"><span>Bahasa</span><select id="setLang"><option value="id">Indonesia</option><option value="en">English</option><option value="auto">Auto Detect</option></select></label>
+      <label class="srch-field"><span>Tema</span><select id="setTheme"><option value="dark">Gelap</option><option value="light">Terang</option><option value="neon">Neon</option><option value="system">Ikuti Sistem</option></select></label>
+      <label class="srch-field"><span>Maks Riwayat (<span id="setHistMaxVal">100</span>)</span><input type="range" id="setHistMax" min="10" max="500" value="100" /></label>
+      <label class="srch-field"><span>Ukuran Font (<span id="setFontSizeVal">14</span>px)</span><input type="range" id="setFontSize" min="12" max="20" value="14" /></label>
+      <label class="srch-field"><span>Zoom (<span id="setZoomVal">100</span>%)</span><input type="range" id="setZoom" min="70" max="150" value="100" /></label>
+    </div>
+    <!-- PRIVASI -->
+    <div class="srch-dpane" data-dpane="privasi">
+      <label class="srch-switch"><span>Do Not Track</span><input type="checkbox" id="setDoNotTrack" /><i></i></label>
+      <label class="srch-switch"><span>Blokir Cookie 3rd-Party</span><input type="checkbox" id="setBlockCookies3p" /><i></i></label>
+      <label class="srch-switch"><span>Blokir Pelacak</span><input type="checkbox" id="setBlockTrackers" /><i></i></label>
+      <label class="srch-switch"><span>Blokir Iklan</span><input type="checkbox" id="setBlockAds" /><i></i></label>
+      <label class="srch-switch"><span>Blokir Popup</span><input type="checkbox" id="setBlockPopups" /><i></i></label>
+      <label class="srch-switch"><span>Auto-clear saat Tutup</span><input type="checkbox" id="setAutoClear" /><i></i></label>
+      <label class="srch-switch"><span>Kids Mode</span><input type="checkbox" id="setKidsMode" /><i></i></label>
+      <label class="srch-switch"><span>Whitelist Mode</span><input type="checkbox" id="setWhitelistMode" /><i></i></label>
+    </div>
+    <!-- KEAMANAN -->
+    <div class="srch-dpane" data-dpane="keamanan">
+      <label class="srch-field"><span>Safe Browsing</span><select id="setSafeBrowsing"><option value="off">Nonaktif</option><option value="standard">Standar</option><option value="high">Tinggi</option><option value="paranoid">Paranoid</option></select></label>
+      <label class="srch-switch"><span>Blokir Akses Mencurigakan</span><input type="checkbox" id="setBlockSuspicious" /><i></i></label>
+      <label class="srch-switch"><span>HTTPS-Only Mode</span><input type="checkbox" id="setHttpsOnly" /><i></i></label>
+      <label class="srch-switch"><span>Blokir WebRTC Leak</span><input type="checkbox" id="setBlockWebRTC" /><i></i></label>
+      <label class="srch-switch"><span>Blokir Canvas Fingerprint</span><input type="checkbox" id="setBlockFingerprint" /><i></i></label>
+      <label class="srch-switch"><span>Blokir Geolocation</span><input type="checkbox" id="setBlockGeo" /><i></i></label>
+      <label class="srch-switch"><span>Blokir Kamera &amp; Mikrofon</span><input type="checkbox" id="setBlockMedia" /><i></i></label>
+    </div>
+    <!-- DNS -->
+    <div class="srch-dpane" data-dpane="dns">
+      <label class="srch-field"><span>Pilihan DNS</span><select id="setDns"></select></label>
+      <label class="srch-field"><span>Custom DNS (IPv4)</span><input type="text" id="setCustomDns" placeholder="contoh: 1.1.1.1" /></label>
+      <label class="srch-switch"><span>DNS-over-HTTPS (DoH)</span><input type="checkbox" id="setDoh" /><i></i></label>
+      <label class="srch-field"><span>Proxy Manual (host:port)</span><input type="text" id="setProxy" placeholder="contoh: 127.0.0.1:8080" /></label>
+      <label class="srch-switch"><span>TOR Mode</span><input type="checkbox" id="setTor" /><i></i></label>
+      <div class="srch-dns-info" id="sgDnsInfo">DNS Aktif: Cloudflare (1.1.1.1 / 1.0.0.1)</div>
+      <button type="button" class="srch-primary-btn" id="sgTestDnsBtn"><i class="fas fa-satellite-dish"></i> Test DNS</button>
+    </div>
+    <!-- TAMPILAN -->
+    <div class="srch-dpane" data-dpane="tampilan">
+      <label class="srch-field"><span>Warna Aksen</span><select id="setAccent"><option value="gold">Gold (default)</option><option value="violet">Neon Violet</option><option value="cyan">Neon Cyan</option><option value="magenta">Neon Magenta</option></select></label>
+      <label class="srch-field"><span>Layout</span><select id="setLayout"><option value="comfy">Nyaman</option><option value="compact">Padat</option></select></label>
+      <label class="srch-switch"><span>Tampilkan Favicon</span><input type="checkbox" id="setShowFavicon" /><i></i></label>
+      <label class="srch-switch"><span>Tampilkan Preview</span><input type="checkbox" id="setShowPreview" /><i></i></label>
+      <label class="srch-switch"><span>Animasi UI</span><input type="checkbox" id="setAnimations" /><i></i></label>
+    </div>
+    <!-- LANJUTAN -->
+    <div class="srch-dpane" data-dpane="lanjutan">
+      <label class="srch-field"><span>User-Agent</span><select id="setUserAgent"><option value="auto">Auto</option><option value="chrome">Chrome Desktop</option><option value="firefox">Firefox Desktop</option><option value="safari">Safari Desktop</option><option value="mobile">Mobile Android</option><option value="ios">Mobile iOS</option></select></label>
+      <label class="srch-switch"><span>JavaScript</span><input type="checkbox" id="setJavascript" /><i></i></label>
+      <label class="srch-switch"><span>Muat Gambar</span><input type="checkbox" id="setImages" /><i></i></label>
+      <label class="srch-switch"><span>Izinkan Cookie</span><input type="checkbox" id="setCookies" /><i></i></label>
+      <label class="srch-switch"><span>Hardware Acceleration</span><input type="checkbox" id="setHwAccel" /><i></i></label>
+      <div class="srch-export-row">
+        <button type="button" class="srch-primary-btn" id="sgExportSettings"><i class="fas fa-download"></i> Export</button>
+        <button type="button" class="srch-primary-btn" id="sgImportSettings"><i class="fas fa-upload"></i> Import</button>
+        <input type="file" id="sgImportSettingsFile" accept=".json" hidden />
+      </div>
+      <div class="srch-export-row">
+        <button type="button" class="srch-primary-btn" id="sgExportBookmarks"><i class="fas fa-download"></i> Bookmark HTML</button>
+        <button type="button" class="srch-primary-btn" id="sgImportBookmarks"><i class="fas fa-upload"></i> Import HTML</button>
+        <input type="file" id="sgImportBookmarksFile" accept=".html,.htm" hidden />
+      </div>
+      <button type="button" class="srch-primary-btn" id="sgClearCacheBtn"><i class="fas fa-broom"></i> Bersihkan Cache</button>
+      <button type="button" class="srch-danger-btn" id="sgResetSettingsBtn"><i class="fas fa-rotate-left"></i> Reset Setelan</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════════ SIDE PANEL ══════════════ -->
+<div class="sg-sidepanel-overlay" id="sgSidePanelOverlay" hidden></div>
+<aside class="sg-sidepanel" id="sgSidePanel" aria-label="Panel samping" aria-hidden="true">
+  <div class="sg-sidepanel-header">
+    <div class="sg-sidepanel-tabs" role="tablist">
+      <button class="sg-sp-tab active" data-panel="history" title="Riwayat" role="tab"><i class="fas fa-clock-rotate-left"></i></button>
+      <button class="sg-sp-tab" data-panel="bookmarks" title="Bookmark" role="tab"><i class="fas fa-star"></i></button>
+      <button class="sg-sp-tab" data-panel="reading" title="Reading List" role="tab"><i class="fas fa-book-open"></i></button>
+      <button class="sg-sp-tab" data-panel="blocked" title="Blokir" role="tab"><i class="fas fa-ban"></i></button>
+      <button class="sg-sp-tab" data-panel="dns" title="DNS" role="tab"><i class="fas fa-server"></i></button>
+      <button class="sg-sp-tab" data-panel="debug" title="Debug" role="tab"><i class="fas fa-bug"></i></button>
+    </div>
+    <button class="sg-sidepanel-close" id="sgSidePanelClose" aria-label="Tutup"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="sg-sidepanel-body">
+    <div class="sg-sp-panel active" data-panel="history">
+      <div class="sg-sp-actions">
+        <input type="text" class="sg-sp-search" id="sgHistSearch" placeholder="Cari riwayat..." />
+        <button class="sg-sp-clear" id="sgHistClear" title="Hapus semua"><i class="fas fa-trash"></i></button>
+      </div>
+      <div class="sg-sp-list" id="sgHistList"></div>
+    </div>
+    <div class="sg-sp-panel" data-panel="bookmarks">
+      <div class="sg-sp-actions"><input type="text" class="sg-sp-search" id="sgBmSearch" placeholder="Cari bookmark..." /></div>
+      <div class="sg-sp-list" id="sgBmList"></div>
+    </div>
+    <div class="sg-sp-panel" data-panel="reading">
+      <div class="sg-sp-actions"><input type="text" class="sg-sp-search" id="sgReadSearch" placeholder="Cari di reading list..." /></div>
+      <div class="sg-sp-list" id="sgReadList"></div>
+    </div>
+    <div class="sg-sp-panel" data-panel="blocked">
+      <div class="sg-sp-actions">
+        <input type="text" class="sg-sp-search" id="sgBlInput" placeholder="Tambah domain (contoh: ads.com)" />
+        <button class="sg-sp-add" id="sgBlAdd" title="Tambah"><i class="fas fa-plus"></i></button>
+      </div>
+      <div class="sg-sp-list" id="sgBlList"></div>
+    </div>
+    <div class="sg-sp-panel" data-panel="dns">
+      <div class="sg-dns-info"><p class="sg-dns-note"><i class="fas fa-info-circle"></i> DNS-over-HTTPS aktif. Semua query dienkripsi.</p></div>
+      <div class="sg-sp-actions">
+        <input type="text" class="sg-sp-search" id="sgDnsQuery" placeholder="Cari DNS (contoh: example.com)" />
+        <button class="sg-sp-add" id="sgDnsLookup" title="Lookup"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="sg-sp-list" id="sgDnsList"></div>
+    </div>
+    <div class="sg-sp-panel" data-panel="debug">
+      <div class="sg-sp-actions">
+        <button class="sg-btn sg-btn-secondary" id="sgDebugExport" style="flex:1;justify-content:center"><i class="fas fa-download"></i> Export Log</button>
+        <button class="sg-sp-clear" id="sgDebugClear"><i class="fas fa-trash"></i></button>
+      </div>
+      <div class="sg-sp-list" id="sgDebugList"></div>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════════ MODAL: SUSPICIOUS URL ══════════════ -->
+<div class="sg-modal" id="sgSusModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="sg-modal-backdrop" data-close></div>
+  <div class="sg-modal-content">
+    <div class="sg-modal-header">
+      <h3><i class="fas fa-triangle-exclamation"></i> Situs Mencurigakan</h3>
+      <button class="sg-modal-close" data-close aria-label="Tutup"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sg-modal-body">
+      <p id="sgSusMsg" style="color:var(--text-secondary);line-height:1.6;margin-bottom:16px"></p>
+      <div class="sg-blocked-reasons" id="sgSusReasons"></div>
+    </div>
+    <div class="sg-modal-footer">
+      <button class="sg-btn sg-btn-secondary" id="sgSusCancel">Batal (Disarankan)</button>
+      <button class="sg-btn sg-btn-danger" id="sgSusContinue">Lanjut Risiko</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: ENGINE INFO ══════════════ -->
+<div class="sg-modal" id="sgEngineInfoModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="sg-modal-backdrop" data-close></div>
+  <div class="sg-modal-content">
+    <div class="sg-modal-header">
+      <h3><i class="fas fa-circle-info"></i> Info Mesin Pencari</h3>
+      <button class="sg-modal-close" data-close aria-label="Tutup"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sg-modal-body" id="sgEngineInfoBody"></div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: PRIVACY REPORT ══════════════ -->
+<div class="sg-modal" id="sgPrivacyModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="sg-modal-backdrop" data-close></div>
+  <div class="sg-modal-content">
+    <div class="sg-modal-header">
+      <h3><i class="fas fa-file-shield"></i> Privacy Report</h3>
+      <button class="sg-modal-close" data-close aria-label="Tutup"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sg-modal-body" id="sgPrivacyBody"></div>
+    <div class="sg-modal-footer">
+      <button class="sg-btn sg-btn-primary" data-close>Tutup</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: SHORTCUT HELP ══════════════ -->
+<div class="sg-modal" id="sgShortcutModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="sg-modal-backdrop" data-close></div>
+  <div class="sg-modal-content">
+    <div class="sg-modal-header">
+      <h3><i class="fas fa-keyboard"></i> Keyboard Shortcut</h3>
+      <button class="sg-modal-close" data-close aria-label="Tutup"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sg-modal-body" id="sgShortcutBody"></div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: QR CODE ══════════════ -->
+<div class="sg-modal" id="sgQrModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="sg-modal-backdrop" data-close></div>
+  <div class="sg-modal-content" style="max-width:360px;text-align:center">
+    <div class="sg-modal-header">
+      <h3><i class="fas fa-qrcode"></i> QR Code Halaman</h3>
+      <button class="sg-modal-close" data-close aria-label="Tutup"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="sg-modal-body" style="display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div id="sgQrBox" style="background:#fff;padding:16px;border-radius:12px"></div>
+      <div id="sgQrUrl" style="font-size:0.75rem;color:var(--text-muted);word-break:break-all"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: READER MODE ══════════════ -->
+<div class="sg-modal" id="sgReaderModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="sg-modal-backdrop" data-close></div>
+  <div class="sg-modal-content" style="max-width:780px">
+    <div class="sg-modal-header">
+      <h3><i class="fas fa-book-open"></i> Reader Mode</h3>
+      <div style="display:flex;gap:8px">
+        <button class="sg-modal-close" id="sgReaderFontDown" title="Perkecil"><i class="fas fa-minus"></i></button>
+        <button class="sg-modal-close" id="sgReaderFontUp" title="Perbesar"><i class="fas fa-plus"></i></button>
+        <button class="sg-modal-close" data-close aria-label="Tutup"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+    <div class="sg-modal-body" id="sgReaderBody" style="max-height:70vh;overflow-y:auto;line-height:1.7;font-size:16px"></div>
+  </div>
+</div>
+
+<!-- ══════════════ LOADING OVERLAY (BYPASS) ══════════════ -->
+<div class="srch-loading-overlay" id="sgLoadingOverlay" aria-hidden="true">
+  <div class="srch-loading-box">
+    <div class="srch-loading-spinner"></div>
+    <h3 id="sgLoadingTitle">Menembus Blokir...</h3>
+    <p id="sgLoadingSub">Mohon tunggu sebentar, sedang memproses proxy</p>
+    <div class="srch-progress-bar"><div class="srch-progress-fill" id="sgProgressFill"></div></div>
+  </div>
+</div>
+
+<!-- ══════════════ PROFILE MODAL ══════════════ -->
+<div id="profileModal" class="profile-modal">
+  <div class="profile-modal-content card-3d">
+    <span class="profile-close" id="profileModalClose">&times;</span>
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar-container">
+          <img src="https://ik.imagekit.io/IrgxyMods/IMG_20250922_195742.jpg?updatedAt=1758545932127" alt="Avatar" class="profile-avatar" />
+          <div class="profile-status"></div>
+          <div class="profile-edit-icon"><i class="fas fa-camera"></i></div>
+        </div>
+        <div class="profile-title"><h2 class="profile-name">Pengguna IRGXYMODS</h2><p class="profile-rank">Member Premium</p></div>
+        <div class="profile-badges">
+          <div class="badge gold-badge"><i class="fas fa-crown"></i></div>
+          <div class="badge verified-badge"><i class="fas fa-check-circle"></i></div>
+          <div class="badge vip-badge"><i class="fas fa-star"></i></div>
+        </div>
+      </div>
+      <div class="profile-stats">
+        <div class="stat-item"><div class="stat-value" id="statDownloads">0</div><div class="stat-label">Aplikasi Diunduh</div></div>
+        <div class="stat-item"><div class="stat-value" id="statDays">0</div><div class="stat-label">Hari Aktif</div></div>
+        <div class="stat-item"><div class="stat-value" id="statBugs">0</div><div class="stat-label">Laporan Bug</div></div>
+      </div>
+      <div class="profile-info">
+        <div class="info-section">
+          <h3 class="section-title"><i class="fas fa-history"></i> Aktivitas Terbaru</h3>
+          <div id="activityTimeline"></div>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="profile-action-btn edit-profile"><i class="fas fa-edit"></i><span>Edit Profil</span></button>
+        <button class="profile-action-btn upgrade-premium"><i class="fas fa-crown"></i><span>Upgrade Premium</span></button>
+        <button class="profile-action-btn logout"><i class="fas fa-sign-out-alt"></i><span>Keluar</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<footer>
+  <p style="margin-bottom:0.5rem;color:rgba(255,255,255,0.8);">&copy; 2025 IRGXY MODS — Searching Universal V3</p>
+  <p style="margin-bottom:1.5rem;color:rgba(255,255,255,0.6);">🔒 100% Client-Side · No Tracking · No Log</p>
+  <div class="footer-links">
+    <a href="https://policies.google.com/privacy?hl=en-US" class="footer-link" target="_blank" rel="noopener">Privacy Policy</a>
+    <a href="https://policies.google.com/terms?hl=en-US" class="footer-link" target="_blank" rel="noopener">Terms of Service</a>
+    <a href="https://t.me/irgxyzmods" class="footer-link" target="_blank" rel="noopener">Contact Us</a>
+    <a href="https://policies.google.com/faq?hl=id" class="footer-link" target="_blank" rel="noopener">FAQ</a>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/downloader.js"></script>
+<script src="../js/searching.js"></script>
+</body>
+</html>

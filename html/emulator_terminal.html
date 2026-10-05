@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IRGXYMODS Emulator Terminal v3.0 ULTIMATE</title>
+<meta name="description" content="Terminal emulator client-side ultimate — 115+ command, VFS, JS/Python runtime, package manager, 6 tema." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/emulator_terminal.css" />
+</head>
+<body data-theme="dark">
+<div class="toast-container" id="toastContainer"></div>
+
+<header>
+  <div class="header-top">
+    <a href="../index.html" class="logo-brand"><i class="fas fa-crown"></i><h1>IRGXYMODS</h1></a>
+    <div class="header-actions">
+      <div style="position:relative;display:inline-block;">
+        <button class="settings-btn" id="settingsToggle" title="Pengaturan"><i class="fas fa-cog"></i></button>
+        <div class="settings-dropdown" id="settingsDropdown">
+          <a href="login.html" class="dropdown-item"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" id="profileDropdownBtn"><i class="fas fa-user"></i> Profil</button>
+          <button class="dropdown-item" id="themeToggleBtn"><i class="fas fa-palette"></i> Tema</button>
+          <div class="dropdown-divider"></div>
+          <a href="irgxymods.html" class="dropdown-item"><i class="fas fa-info-circle"></i> Tentang</a>
+          <button class="dropdown-item" id="helpBtn"><i class="fas fa-question-circle"></i> Bantuan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- NAV TABS — LENGKAP & KONSISTEN -->
+  <div class="nav-tabs-container">
+    <div class="nav-tabs">
+      <a href="../index.html" class="nav-tab">Aplikasi Mod</a>
+      <a href="irgxymods.html" class="nav-tab">IrgxyMods</a>
+      <a href="acount.html" class="nav-tab">Akun Premium</a>
+      <a href="ali_motion.html" class="nav-tab" aria-current="page"><i class="fas fa-film" aria-hidden="true"></i> Alight Motion</a>
+      <a href="searching.html" class="nav-tab" aria-current="page"><i class="fas fa-magnifying-glass"></i> Searching</a>
+      <a href="fitur.html" class="nav-tab">Fitur Eksklusif</a>
+      <a href="testimoni.html" class="nav-tab">Testimoni</a>
+      <a href="cheat.html" class="nav-tab">Cheat Game</a>
+      <a href="jadwalsholat.html" class="nav-tab"><i class="fas fa-mosque"></i> Jadwal Sholat</a>
+      <a href="alquran_v4.html" class="nav-tab"><i class="fas fa-book-quran"></i> Al-Qur'an</a>
+      <a href="tiktok.html" class="nav-tab"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="youtube.html" class="nav-tab"><i class="fab fa-youtube"></i> YouTube</a>
+      <a href="instagram_v4.html" class="nav-tab"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="threads.html" class="nav-tab"><i class="fas fa-at"></i> Threads</a>
+      <a href="facebook.html" class="nav-tab"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="compressvideo.html" class="nav-tab"><i class="fas fa-compress"></i> Compress Video</a>
+      <a href="iqcgenerator.html" class="nav-tab"><i class="fas fa-comments"></i> IQC Generator</a>
+      <a href="qris-barcode.html" class="nav-tab"><i class="fas fa-qrcode"></i> QRIS &amp; Barcode</a>
+      <a href="spotify.html" class="nav-tab"><i class="fab fa-spotify"></i> Spotify</a>
+      <a href="testspeed.html" class="nav-tab"><i class="fas fa-tachometer-alt"></i> Test Speed</a>
+      <a href="base64_v7.html" class="nav-tab"><i class="fas fa-code"></i> Base64</a>
+      <a href="emulator_terminal.html" class="nav-tab active"><i class="fas fa-terminal"></i> Emulator Terminal</a>
+      <a href="shortlink-bypass.html" class="nav-tab" aria-current="page"><i class="fas fa-unlink" aria-hidden="true"></i> Shortlink Bypass</a>
+      <a href="proyek.html" class="nav-tab">Proyek Saya</a>
+      <a href="portofolio.html" class="nav-tab">Portofolio</a>
+      <a href="kontak.html" class="nav-tab">Kontak</a>
+      <a href="login.html" class="nav-tab"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+  <section class="et-hero" data-aos="fade-up">
+    <div class="et-hero-icon"><i class="fas fa-terminal"></i></div>
+    <h1 class="et-hero-title">Emulator Terminal v3.0 ULTIMATE</h1>
+    <p class="et-hero-sub">115+ command · 6 tema · multi-shell · split screen · Web Crypto · Package Browser · HTTP Client · Script Library · Session Recorder · 100% client-side.</p>
+    <div class="et-hero-pills">
+      <span class="et-pill"><i class="fas fa-bolt"></i> 115+ Commands</span>
+      <span class="et-pill"><i class="fab fa-js"></i> JS/Python</span>
+      <span class="et-pill"><i class="fas fa-box"></i> APT/PKG/NPM/PIP</span>
+      <span class="et-pill"><i class="fas fa-folder-tree"></i> VFS Persisten</span>
+      <span class="et-pill"><i class="fas fa-palette"></i> 6 Tema</span>
+      <span class="et-pill"><i class="fas fa-columns"></i> Multi-Shell</span>
+      <span class="et-pill"><i class="fas fa-layer-group"></i> Split Screen</span>
+      <span class="et-pill"><i class="fas fa-circle-dot"></i> Session Recorder</span>
+    </div>
+  </section>
+
+  <section class="et-window-wrap" data-aos="fade-up" data-aos-delay="100">
+    <div class="et-window" id="etWindow">
+      <div class="et-titlebar">
+        <div class="et-dots">
+          <span class="et-dot et-dot-red"></span>
+          <span class="et-dot et-dot-yellow"></span>
+          <span class="et-dot et-dot-green"></span>
+        </div>
+        <div class="et-title" id="etTitle">irgxymods@irgxy-terminal: ~</div>
+        <div class="et-actions">
+          <button class="et-action" id="etSearchBtn" title="Cari output (Ctrl+F)"><i class="fas fa-search"></i></button>
+          <button class="et-action" id="etRecordBtn" title="Rekam sesi"><i class="fas fa-circle-dot"></i></button>
+          <button class="et-action" id="etSplitBtn2" title="Split screen"><i class="fas fa-layer-group"></i></button>
+          <button class="et-action" id="etBookmarkBtn" title="Bookmark"><i class="fas fa-bookmark"></i></button>
+          <button class="et-action" id="etSettingsBtn" title="Settings terminal"><i class="fas fa-sliders-h"></i></button>
+          <button class="et-action" id="etPresentBtn" title="Presentation mode"><i class="fas fa-tv"></i></button>
+          <button class="et-action" id="etToggleSidebar" title="Toggle Sidebar"><i class="fas fa-columns"></i></button>
+          <button class="et-action" id="etSplitBtn" title="Tab Baru"><i class="fas fa-code-branch"></i></button>
+          <button class="et-action" id="etFullscreenBtn" title="Fullscreen"><i class="fas fa-expand"></i></button>
+          <button class="et-action" id="etResetBtn" title="Reset Virtual FS"><i class="fas fa-redo"></i></button>
+        </div>
+      </div>
+
+      <div class="et-tabbar" id="etTabbar">
+        <div class="et-tabs" id="etTabs"></div>
+        <button class="et-tab-add" id="etTabAdd" title="Tab Baru"><i class="fas fa-plus"></i></button>
+      </div>
+
+      <div class="et-body" id="etBody">
+        <aside class="et-sidebar" id="etSidebar">
+          <div class="et-sidebar-header">
+            <span><i class="fas fa-folder"></i> Explorer</span>
+            <div class="et-sidebar-actions">
+              <button class="et-mini-btn" id="etRefreshTree" title="Refresh"><i class="fas fa-sync-alt"></i></button>
+              <button class="et-mini-btn" id="etExportFS" title="Export FS"><i class="fas fa-download"></i></button>
+              <button class="et-mini-btn" id="etImportFS" title="Import FS"><i class="fas fa-upload"></i></button>
+            </div>
+          </div>
+          <div class="et-sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="etTreeSearch" placeholder="Cari file..." />
+          </div>
+          <div class="et-tree" id="etTree"></div>
+          <div class="et-recent">
+            <div class="et-recent-head"><i class="fas fa-history"></i> Recent</div>
+            <div class="et-recent-list" id="etRecentList"></div>
+          </div>
+          <div class="et-disk-usage">
+            <div class="et-disk-label"><span>Disk Usage</span><span id="etDiskLabel">0 KB / 5 MB</span></div>
+            <div class="et-disk-bar"><div class="et-disk-fill" id="etDiskFill"></div></div>
+          </div>
+        </aside>
+
+        <div class="et-main" id="etMain">
+          <div class="et-pane" id="etPanePrimary">
+            <div class="et-screen" id="etScreen" tabindex="0"></div>
+            <div class="et-search-bar" id="etSearchBar">
+              <i class="fas fa-search"></i>
+              <input type="text" id="etSearchInput" placeholder="Cari di output..." />
+              <span class="et-search-count" id="etSearchCount">0/0</span>
+              <button class="et-search-nav" id="etSearchPrev"><i class="fas fa-chevron-up"></i></button>
+              <button class="et-search-nav" id="etSearchNext"><i class="fas fa-chevron-down"></i></button>
+              <button class="et-search-close" id="etSearchClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="et-history-search" id="etHistorySearch">
+              <div class="et-hs-inner">
+                <input type="text" id="etHsInput" placeholder="(reverse-i-search)" />
+                <div class="et-hs-list" id="etHsList"></div>
+              </div>
+            </div>
+            <div class="et-input-row">
+              <span class="et-prompt" id="etPrompt">
+                <span class="et-user">irgxymods</span>
+                <span class="et-sep">@</span>
+                <span class="et-host">irgxy-terminal</span>
+                <span class="et-sep">:</span>
+                <span class="et-path">~</span>
+                <span class="et-sigil">$</span>
+              </span>
+              <div class="et-input-wrap">
+                <input type="text" class="et-input" id="etInput" autocomplete="off" spellcheck="false" />
+                <div class="et-autocomplete" id="etAutocomplete"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Secondary pane dibuat dinamis saat split -->
+        </div>
+      </div>
+
+      <div class="et-statusbar">
+        <div class="et-status-left">
+          <span class="et-status-dot" id="etStatusDot"></span>
+          <span id="etStatusText">Ready</span>
+          <span class="et-status-sep">·</span>
+          <span><i class="fas fa-folder"></i> <span id="etStatusCwd">~</span></span>
+          <span class="et-status-sep">·</span>
+          <span id="etShellBadge" title="Shell aktif"><i class="fas fa-terminal"></i> bash</span>
+          <span class="et-status-sep">·</span>
+          <span id="etJobsBadge" style="display:none;"><i class="fas fa-tasks"></i> <span id="etJobsCount">0</span> jobs</span>
+        </div>
+        <div class="et-status-right">
+          <span>UTF-8</span>
+          <span class="et-status-sep">·</span>
+          <span id="etStatusRuntime">JS</span>
+          <span class="et-status-sep">·</span>
+          <span id="etStatusTime">--:--:--</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="et-quickbar" data-aos="fade-up" data-aos-delay="150">
+    <h3 class="et-section-mini">Quick Commands</h3>
+    <div class="et-quick-list">
+      <button class="et-quick" data-cmd="help">help</button>
+      <button class="et-quick" data-cmd="neofetch">neofetch</button>
+      <button class="et-quick" data-cmd="pkg list">pkg list</button>
+      <button class="et-quick" data-cmd="ls">ls</button>
+      <button class="et-quick" data-cmd="tree">tree</button>
+      <button class="et-quick" data-cmd="top-live">top-live</button>
+      <button class="et-quick" data-cmd="df -h">df -h</button>
+      <button class="et-quick" data-cmd="cal">cal</button>
+      <button class="et-quick" data-cmd="bc">bc</button>
+      <button class="et-quick" data-cmd="json-tui contoh.json">json-tui</button>
+      <button class="et-quick" data-cmd="md README.md">md</button>
+      <button class="et-quick" data-cmd="qrcode https://irgxymods.dev">qrcode</button>
+      <button class="et-quick" data-cmd="passwd-gen 20">passwd-gen</button>
+      <button class="et-quick" data-cmd="script-library">script-library</button>
+      <button class="et-quick" data-cmd="pipe-builder">pipe-builder</button>
+      <button class="et-quick" data-cmd="clear">clear</button>
+    </div>
+  </section>
+
+  <section class="et-info-grid" data-aos="fade-up" data-aos-delay="200">
+    <div class="et-info-card">
+      <h3 class="et-info-title"><i class="fas fa-book"></i> Command Reference v3</h3>
+      <div class="et-cmd-cats">
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">📁</span><div><strong>File System</strong><small>ls cd pwd mkdir rmdir touch cat rm cp mv tree find stat du ln head tail zip unzip encrypt decrypt file mime hexdump</small></div></div>
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">📝</span><div><strong>Text</strong><small>echo grep sed awk wc sort uniq cut tr rev tac nl column fold paste split base32</small></div></div>
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">⚡</span><div><strong>Runtime</strong><small>node js deno bun python python3 shell</small></div></div>
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">📦</span><div><strong>Package</strong><small>pkg apt npm pip</small></div></div>
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">🌐</span><div><strong>Network</strong><small>curl wget ping dig ip nc http headers netdiag whois nslookup traceroute</small></div></div>
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">🖥️</span><div><strong>System</strong><small>whoami uname date uptime neofetch df free ps top top-live htop env lsof ss netstat dmesg</small></div></div>
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">🔐</span><div><strong>Crypto</strong><small>base64 md5sum sha1sum sha256sum sha512sum hash-all passwd-gen qrcode barcode jwt openssl</small></div></div>
+        <div class="et-cmd-cat"><span class="et-cmd-cat-icon">🛠️</span><div><strong>Tools</strong><small>json json-tui csv md diff-tui regex-tui format minify lint beautify http pipe-builder script-library</small></div></div>
+      </div>
+    </div>
+    <div class="et-info-card">
+      <h3 class="et-info-title"><i class="fas fa-question-circle"></i> FAQ v3</h3>
+      <div class="et-faq">
+        <div class="et-faq-item"><button class="et-faq-q">Apa yang baru di v3?<i class="fas fa-chevron-down"></i></button><div class="et-faq-a">115+ command, 6 tema, multi-shell, split screen, session recorder, Web Crypto AES-GCM, Package Browser, HTTP Client, Script Library, Pipe Builder, Recent Files, Bookmark, Presentation Mode, dan banyak lagi.</div></div>
+        <div class="et-faq-item"><button class="et-faq-q">Bagaimana ganti tema?<i class="fas fa-chevron-down"></i></button><div class="et-faq-a">Klik ikon <code>sliders</code> di titlebar terminal, atau ketik <code>theme dracula</code>. Tema tersedia: dark, light, dracula, monokai, solarized, nord.</div></div>
+        <div class="et-faq-item"><button class="et-faq-q">Bagaimana split screen?<i class="fas fa-chevron-down"></i></button><div class="et-faq-a">Klik ikon <code>layer-group</code> di titlebar, atau ketik <code>split h</code> (horizontal) / <code>split v</code> (vertical). Ketik <code>split off</code> untuk kembali.</div></div>
+        <div class="et-faq-item"><button class="et-faq-q">Bagaimana menjalankan Python?<i class="fas fa-chevron-down"></i></button><div class="et-faq-a">Ketik <code>python3 hello.py</code>. Pyodide akan dimuat otomatis dari CDN sekali pakai.</div></div>
+        <div class="et-faq-item"><button class="et-faq-q">Apakah data saya tersimpan?<i class="fas fa-chevron-down"></i></button><div class="et-faq-a">Ya. VFS, settings, bookmark, alias, env, riwayat file, semuanya di localStorage. Klik ikon download di sidebar untuk ekspor VFS.</div></div>
+        <div class="et-faq-item"><button class="et-faq-q">Keyboard shortcut apa saja?<i class="fas fa-chevron-down"></i></button><div class="et-faq-a">Ctrl+L clear · Ctrl+C cancel · Ctrl+R history search · Ctrl+F cari output · Ctrl+A/E awal/akhir baris · Ctrl+U clear line · Tab autocomplete · Arrow Up/Down history · Ctrl+Shift+P presentation.</div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<!-- ═════ SETTINGS DRAWER ═════ -->
+<aside class="et-drawer" id="etSettingsDrawer">
+  <div class="et-drawer-head">
+    <span><i class="fas fa-sliders-h"></i> Terminal Settings</span>
+    <button id="etDrawerClose"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="et-drawer-body">
+    <label class="et-field"><span>Font Size</span><input type="range" id="etSetFontSize" min="10" max="24" step="1" /></label>
+    <label class="et-field"><span>Font Family</span>
+      <select id="etSetFontFamily">
+        <option value="'JetBrains Mono',monospace">JetBrains Mono</option>
+        <option value="'Fira Code',monospace">Fira Code</option>
+        <option value="Consolas,monospace">Consolas</option>
+        <option value="monospace">System Mono</option>
+      </select>
+    </label>
+    <label class="et-field"><span>Tema</span>
+      <select id="etSetTheme">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="dracula">Dracula</option>
+        <option value="monokai">Monokai</option>
+        <option value="solarized">Solarized Dark</option>
+        <option value="nord">Nord</option>
+      </select>
+    </label>
+    <label class="et-field"><span>Shell</span>
+      <select id="etSetShell">
+        <option value="bash">bash</option>
+        <option value="zsh">zsh</option>
+        <option value="fish">fish</option>
+        <option value="sh">sh</option>
+        <option value="powershell">powershell</option>
+      </select>
+    </label>
+    <label class="et-field"><span>Cursor</span>
+      <select id="etSetCursor"><option value="bar">Bar</option><option value="block">Block</option><option value="underline">Underline</option></select>
+    </label>
+    <label class="et-field et-field-check"><input type="checkbox" id="etSetBlink" /><span>Cursor Blink</span></label>
+    <label class="et-field et-field-check"><input type="checkbox" id="etSetSound" /><span>Bell Sound</span></label>
+    <label class="et-field et-field-check"><input type="checkbox" id="etSetAutoCopy" /><span>Auto-copy Selection</span></label>
+    <label class="et-field"><span>Scrollback Lines</span><input type="number" id="etSetScrollback" min="100" max="10000" step="100" /></label>
+    <label class="et-field"><span>Prompt Format</span><input type="text" id="etSetPrompt" placeholder="{user}@{host}:{cwd}$" /></label>
+    <button class="et-btn-primary" id="etSetSave"><i class="fas fa-save"></i> Simpan</button>
+    <button class="et-btn-ghost" id="etSetReset"><i class="fas fa-undo"></i> Reset ke Default</button>
+  </div>
+</aside>
+
+<!-- ═════ PACKAGE BROWSER ═════ -->
+<div class="et-modal" id="etPackageBrowser">
+  <div class="et-modal-win">
+    <div class="et-modal-head"><span><i class="fas fa-box"></i> Package Browser</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body">
+      <div class="et-pb-bar">
+        <input type="text" id="etPbSearch" placeholder="Cari paket..." />
+        <select id="etPbManager"><option value="pkg">pkg</option><option value="npm">npm</option><option value="pip">pip</option></select>
+      </div>
+      <div class="et-pb-list" id="etPbList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═════ MARKDOWN PREVIEW ═════ -->
+<div class="et-modal" id="etMdPreview">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span id="etMdTitle"><i class="fas fa-file-alt"></i> Markdown</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body"><div class="et-md-content" id="etMdContent"></div></div>
+  </div>
+</div>
+
+<!-- ═════ JSON VIEWER ═════ -->
+<div class="et-modal" id="etJsonViewer">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-code"></i> JSON Viewer</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body">
+      <div class="et-json-toolbar"><input type="text" id="etJsonSearch" placeholder="Cari key..." /><button id="etJsonCopy"><i class="fas fa-copy"></i> Copy</button></div>
+      <div class="et-json-tree" id="etJsonTree"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═════ CSV VIEWER ═════ -->
+<div class="et-modal" id="etCsvViewer">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-table"></i> CSV Viewer</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body"><div class="et-csv-wrap" id="etCsvWrap"></div></div>
+  </div>
+</div>
+
+<!-- ═════ HTTP CLIENT ═════ -->
+<div class="et-modal" id="etHttpClient">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-satellite-dish"></i> HTTP Client</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body">
+      <div class="et-http-row">
+        <select id="etHttpMethod"><option>GET</option><option>POST</option><option>PUT</option><option>DELETE</option><option>PATCH</option><option>HEAD</option></select>
+        <input type="text" id="etHttpUrl" placeholder="https://api.example.com/..." />
+        <button class="et-btn-primary" id="etHttpSend"><i class="fas fa-paper-plane"></i> Send</button>
+      </div>
+      <textarea id="etHttpBody" placeholder='{"key":"value"}'></textarea>
+      <div class="et-http-resp" id="etHttpResp">Response akan tampil di sini.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═════ REGEX TESTER ═════ -->
+<div class="et-modal" id="etRegexTester">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-asterisk"></i> Regex Tester</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body">
+      <div class="et-regex-flags">
+        <input type="text" id="etRegexPattern" placeholder="/pattern/flags" />
+        <label><input type="checkbox" data-flag="g" checked />g</label>
+        <label><input type="checkbox" data-flag="i" />i</label>
+        <label><input type="checkbox" data-flag="m" />m</label>
+        <label><input type="checkbox" data-flag="s" />s</label>
+      </div>
+      <textarea id="etRegexText" placeholder="Test string..."></textarea>
+      <div class="et-regex-result" id="etRegexResult"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═════ DIFF VIEWER ═════ -->
+<div class="et-modal" id="etDiffViewer">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span id="etDiffTitle"><i class="fas fa-code-compare"></i> Diff</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body"><div class="et-diff-wrap" id="etDiffWrap"></div></div>
+  </div>
+</div>
+
+<!-- ═════ SCRIPT LIBRARY ═════ -->
+<div class="et-modal" id="etScriptLib">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-book-bookmark"></i> Script Library</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body"><div class="et-sl-list" id="etSlList"></div></div>
+  </div>
+</div>
+
+<!-- ═════ PIPE BUILDER ═════ -->
+<div class="et-modal" id="etPipeBuilder">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-bars-staggered"></i> Pipe Builder</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body">
+      <div class="et-pb-build" id="etPipeStages"></div>
+      <div class="et-pb-add">
+        <input type="text" id="etPipeCmd" placeholder="command args..." />
+        <button id="etPipeAddBtn"><i class="fas fa-plus"></i> Tambah Stage</button>
+        <button class="et-btn-primary" id="etPipeRunBtn"><i class="fas fa-play"></i> Jalankan</button>
+        <button id="etPipeClearBtn"><i class="fas fa-trash"></i> Clear</button>
+      </div>
+      <pre class="et-pb-preview" id="etPipePreview"></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ═════ PROCESS MONITOR ═════ -->
+<div class="et-modal" id="etProcMon">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-microchip"></i> Process Monitor</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body"><div id="etProcMonBody"></div></div>
+  </div>
+</div>
+
+<!-- ═════ NETDIAG ═════ -->
+<div class="et-modal" id="etNetDiag">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span><i class="fas fa-network-wired"></i> Network Diagnostics</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body"><div id="etNetDiagBody"></div></div>
+  </div>
+</div>
+
+<!-- ═════ BOOKMARK MANAGER ═════ -->
+<div class="et-modal" id="etBookmarkMgr">
+  <div class="et-modal-win">
+    <div class="et-modal-head"><span><i class="fas fa-bookmark"></i> Bookmarks</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body">
+      <div class="et-bm-add"><input type="text" id="etBmName" placeholder="nama" /><input type="text" id="etBmCmd" placeholder="command" /><button id="etBmAddBtn"><i class="fas fa-plus"></i></button></div>
+      <div class="et-bm-list" id="etBmList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═════ NANO EDITOR ═════ -->
+<div class="et-nano" id="etNano">
+  <div class="et-nano-win">
+    <div class="et-nano-head"><span id="etNanoFile">file</span><button id="etNanoClose"><i class="fas fa-times"></i></button></div>
+    <textarea class="et-nano-text" id="etNanoText" spellcheck="false"></textarea>
+    <div class="et-nano-foot"><span><kbd>Ctrl</kbd>+<kbd>S</kbd> Simpan · <kbd>Esc</kbd> Tutup</span><button class="et-nano-save" id="etNanoSave">Simpan</button></div>
+  </div>
+</div>
+
+<!-- ═════ IMAGE PREVIEW ═════ -->
+<div class="et-modal" id="etImgPreview">
+  <div class="et-modal-win et-modal-lg">
+    <div class="et-modal-head"><span id="etImgTitle"><i class="fas fa-image"></i> Preview</span><button class="et-modal-close"><i class="fas fa-times"></i></button></div>
+    <div class="et-modal-body"><div class="et-img-wrap" id="etImgWrap"></div></div>
+  </div>
+</div>
+
+<!-- ═════ RECORD INDICATOR ═════ -->
+<div class="et-record-ind" id="etRecordIndicator"><span class="et-rec-dot"></span> REC <span id="etRecTime">00:00</span></div>
+
+<!-- ═════ LOADING OVERLAY ═════ -->
+<div class="et-loading" id="etLoading">
+  <div class="et-spinner"></div>
+  <div class="et-loading-text" id="etLoadingText">Loading...</div>
+  <div class="et-progress"><div class="et-progress-fill" id="etProgressFill"></div></div>
+</div>
+
+<!-- ═════ CONTEXT MENU ═════ -->
+<div class="et-ctx" id="etCtx">
+  <button data-act="open"><i class="fas fa-folder-open"></i> Open</button>
+  <button data-act="preview"><i class="fas fa-eye"></i> Preview</button>
+  <button data-act="rename"><i class="fas fa-i-cursor"></i> Rename</button>
+  <button data-act="duplicate"><i class="fas fa-copy"></i> Duplicate</button>
+  <button data-act="delete"><i class="fas fa-trash"></i> Delete</button>
+</div>
+
+<input type="file" id="etImportInput" accept=".json" style="display:none;" />
+
+<!-- Login + Profile modals (sama seperti v2) -->
+<div id="loginModal" class="login-modal">
+  <div class="login-modal-content card-3d">
+    <span class="login-close" id="loginModalClose">&times;</span>
+    <div class="login-logo"><i class="fas fa-crown logo-icon"></i><h1>IRGXYMODS</h1></div>
+    <h2 class="login-title">Masuk ke Akun Anda</h2>
+    <p class="login-subtitle">Akses konten eksklusif dan fitur premium</p>
+    <form id="loginForm" class="login-form">
+      <div class="form-group"><label for="username">Username atau Email</label>
+        <div class="input-with-icon"><i class="fas fa-user"></i><input type="text" id="username" placeholder="Masukkan username atau email" required /></div>
+      </div>
+      <div class="form-group"><label for="password">Password</label>
+        <div class="input-with-icon"><i class="fas fa-lock"></i><input type="password" id="password" placeholder="Masukkan password" required /></div>
+      </div>
+      <button type="submit" class="login-btn"><i class="fas fa-sign-in-alt"></i><span>Masuk</span></button>
+    </form>
+  </div>
+</div>
+<div id="profileModal" class="profile-modal">
+  <div class="profile-modal-content card-3d">
+    <span class="profile-close" id="profileModalClose">&times;</span>
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar-container">
+          <img src="https://ik.imagekit.io/IrgxyMods/IMG_20250922_195742.jpg?updatedAt=1758545932127" alt="Avatar" class="profile-avatar" />
+          <div class="profile-status"></div>
+        </div>
+        <div class="profile-title"><h2 class="profile-name">Pengguna IRGXYMODS</h2><p class="profile-rank">Member Premium</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<footer>
+  <p style="margin-bottom:0.5rem;color:rgba(255,255,255,0.8);">&copy; 2025 IRGXY MODS — Website Download Aplikasi Mod Dan Premium Terlengkap</p>
+  <p style="margin-bottom:1.5rem;color:rgba(255,255,255,0.6);">✨ Support Modder IrgxyMods ✨</p>
+  <div class="footer-links">
+    <a href="https://policies.google.com/privacy?hl=en-US" class="footer-link" target="_blank">Privacy Policy</a>
+    <a href="https://policies.google.com/terms?hl=en-US" class="footer-link" target="_blank">Terms of Service</a>
+    <a href="https://t.me/irgxyzmods" class="footer-link" target="_blank">Contact Us</a>
+    <a href="https://policies.google.com/faq?hl=id" class="footer-link" target="_blank">FAQ</a>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/emulator_terminal.js"></script>
+</body>
+</html>
